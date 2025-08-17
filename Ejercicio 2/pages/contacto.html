@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contaco</title>
+    <!--Link bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!--Link fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!--Link styles-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header> <!--Header +Navbar-->
+        <nav class="navbar navbar-expand-md fixed-top" data-bs-theme="dark">
+            <div class="container bg-dark custom-flex-start">
+                <h1 class="titulo">Contaco</h1>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                    <li class="nav-item"><a href="formacion.html" class="nav-link">Formacion</a></li>
+                    <li class="nav-item"><a href="info.html" class="nav-link">Info</a></li>
+                    <li class="nav-item active"><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </div>
+        </nav>
+    </header>
+    <main> <!--Main-->
+        <div class="container contenedor-contactos">
+            <div class="row">
+                <div class="col-12 columna-contactos">
+                    <h2 class="titulo-caja-contactos">Contactos:</h2>
+                    <div class="caja-contactos">
+                        <div class="contact">
+                            <i class="fa-brands fa-square-instagram"><a href="#"></a></i>
+                        </div>
+                        <div class="contact">
+                            <i class="fa-brands fa-square-facebook"></i><a href="#"></a></i>
+                        </div>
+                        <div class="contact">
+                            <i class="fa-brands fa-square-github"></i><a href="#"></a></i>
+                        </div>
+                        <div class="contact">
+                            <i class="fa-solid fa-envelope"></i><a href="#"></a></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-formulario" >
+                <h2 class="titulo-formulario">Formulario:</h2>
+                <div class="col-12 col-md-6 columna-formulario-datos">
+                    <form action="#">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-control">
+                        <label for="email" class="form-label">Correo:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@email.com" class="form-control">
+                    </form>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form action="#">
+                        <label for="comentario" class="form-label">Comentario:</label>
+                        <textarea id="comentario" name="comentario" class="form-control" placeholder="Deja tu comentario..." rows="4"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer class="bg-dark text-white text-center text-lg-start  ">
+        <div class="container-fluid  ">
+            <div class="row ">
+                <!--Columna 1-->
+                <div class="col-12 col-md-6 mb-4 mb-md-0 ps-5">
+                    <h4 class="text-uppercase">Sobre mí</h4>
+                    <p>
+                        Desarrollador web Junior, Capacitado y trabajador.<br>
+                        Aprendo rapido y me adapato con facilidad.<br>
+                        Resolver problemas me apasiona.
+                    </p>
+                </div>
+                <!--Columna 2-->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <h4 class="text-uppercase">Enlaces</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../pages/proyectos.html" class="text-white text-decoration-none">Proyectos</a></li>
+                        <li><a href="../pages/formacion.html" class="text-white text-decoration-none">Formacion</a></li>
+                        <li><a href="../pages/info.html" class="text-white text-decoration-none">Info</a></li>
+                        <li><a href="../pages/contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <!--Derechos-->
+                <div class="text-center p-3 bg-secondary">
+                    © 2025 Enol SF. | Todos los derechos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
