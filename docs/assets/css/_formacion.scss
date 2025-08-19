@@ -43,7 +43,7 @@ main .row .columna-formaciones .tarjeta{
     border: 3px solid rgb(248, 247, 247);
     border-radius: 20px;
     overflow: hidden;
-    background-color: $primary-color;
+    background-color: #3ba57c;
 }
 
 main .row .columna-formaciones .tarjeta .icono-forma{
@@ -184,7 +184,7 @@ main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-car
 main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-card  div{
     transform-style: preserve-3d;
     transform: translateZ(100px);
-    background:linear-gradient(45deg, #0EA5E9, $primary-color);
+    background:linear-gradient(45deg, #0EA5E9, #3ba57c);
     margin:0px 30px;
     padding: 20px;
     border-radius: 15px;

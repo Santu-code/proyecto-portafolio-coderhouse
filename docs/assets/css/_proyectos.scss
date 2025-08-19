@@ -24,7 +24,7 @@ main .contenedor-proyectos .row .custom-col-proyect .proyectos{
 }
 
 main .contenedor-proyectos .row .custom-col-proyect .proyectos:hover{
-    background:$primary-color;
+    background:#3ba57c;
     transform: scale(1.09) translateX(25px) translateY(-15px);
     z-index: 10;
 }
