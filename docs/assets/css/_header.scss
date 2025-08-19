@@ -1,42 +1,49 @@
             /*HEADER*/
 
-h1{
-    color:white;
-    text-decoration: underline;
-    text-transform: uppercase;
-}
-body header .custom-color{
-    background-color:#1E293B ;
-}
-body header nav .custom-flex-start{
-    display: flex !important;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start !important;
-    align-content: flex-start;
-    border-radius: 4px;
-}
+body{
+    header{
+        nav{
+            .custom-color{
+                background-color:#1E293B ;
+            }
+            .container{
+                h1{
+                    color:white;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                }
 
-body header nav .custom-flex-start ul li{
-    background-color: #3ba57c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 40px;
-    margin: 7px;
-    border-radius: 4px;
-    border: 1px solid white;
-}
-
-body header nav .custom-flex-start ul  .active{
-    border: 2px solid #FACC15;
-}
-
-body header nav .custom-flex-start ul li:hover{
-    border: 1px solid #ee01f7;
-}
-
-body header nav .custom-flex-start ul li a{
-    color:#030505 ;
+            }
+            .custom-flex-start{
+                display: flex !important;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start !important;
+                align-content: flex-start;
+                border-radius: 4px;
+                ul{
+                    li{
+                        background-color: #3ba57c;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 40px;
+                        margin: 7px;
+                        border-radius: 4px;
+                        border: 1px solid white;
+                        .active{
+                            border: 2px solid #FACC15;
+                        }
+                        a{
+                            color:#030505 ;
+                        }
+                        &:hover{
+                            border: 1px solid #ee01f7;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

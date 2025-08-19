@@ -1,91 +1,78 @@
             /*INFO*/
 
-            /*Sobre Mi*/
-
-main .contenedor-info{
-    margin-top: 130px;
-    text-align: center;
-}
-main .contenedor-info .row .columna-sobre-mi{
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-main .contenedor-info .row .columna-sobre-mi h2{
-    text-transform: capitalize;
-    text-decoration: underline;
-}
-
-main .contenedor-info .row .columna-sobre-mi p{
-    font-style: italic;
-}
-            /*Mis Datos*/
-
-main .contenedor-info .row-mis-datos{
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-main .contenedor-info .row .columna-img-info{
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .contenedor-info .row .columna-img-info img{
-    width: 400px;
-    border-radius: 25px;
-}
-
-main .contenedor-info .row .columna-caja-datos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border-left: 2px solid black;
-}
-
-main .contenedor-info .row .columna-caja-datos .caja-datos{
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    text-align:justify;
-    justify-content:center;
-    align-content: center;
-    
-    
-}
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info h2{
-    font-size: 60px;
-    text-decoration: underline;
-    text-transform: capitalize;
-    
-    
-}
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .caja-datos{
-    width: 300px;    
-    display: flex;
-    justify-content: center;
-}
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .caja-datos span{
-    font-weight:bolder;
-    font-size: 20px;
-    text-decoration: underline;
-    margin-left: 20px;
+body{ 
+    main{
+        .contenedor-info{
+            margin-top: 130px;
+            text-align: center;
+            .row{
+                .columna-sobre-mi{  /*Sobre Mi*/
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                    h2{
+                        text-transform: capitalize;
+                        text-decoration: underline;
+                    }
+                    p{
+                        font-style: italic;
+                    }
+                }
+            }
+            .row-mis-datos{     /*Mis Datos*/
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                .columna-img-info{
+                    height: 700px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 400px;
+                        border-radius: 25px;
+                    }
+                }
+                .columna-caja-datos{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    border-left: 2px solid black;
+                    .caja-datos-info{
+                        .titulo-datos{
+                            font-size: 60px;
+                            text-decoration: underline;
+                            text-transform: capitalize;
+                        }
+                        .caja-datos{
+                            display: flex;
+                            flex-direction: column;
+                            text-align:justify;
+                            justify-content:center;
+                            align-content: center;
+                            width: 300px;    
+                            display: flex;
+                            justify-content: center;
+                            span{
+                                font-weight:bolder;
+                                font-size: 20px;
+                                text-decoration: underline;
+                                margin-left: 20px;
+                            }
+                            p{
+                                font-size: 20px;
+                                font-style: italic;
+                            }
+                        }
+                        .custom-btn.btn{
+                            background-color: #3ba57c;
+                            border-color: #3ba57c;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .caja-datos p{
-    font-size: 20px;
-    font-style: italic;
-}
-
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info  .custom-btn.btn {
-    background-color: #3ba57c;
-    border-color: #3ba57c;
-}

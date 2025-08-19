@@ -1,16 +1,14 @@
 /*GENERAL*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*HEADER*/
-h1 {
+body header nav .custom-color {
+  background-color: #1E293B;
+}
+body header nav .container h1 {
   color: white;
   text-decoration: underline;
   text-transform: uppercase;
 }
-
-body header .custom-color {
-  background-color: #1E293B;
-}
-
 body header nav .custom-flex-start {
   display: flex !important;
   flex-direction: column;
@@ -19,7 +17,6 @@ body header nav .custom-flex-start {
   align-content: flex-start;
   border-radius: 4px;
 }
-
 body header nav .custom-flex-start ul li {
   background-color: #3ba57c;
   display: flex;
@@ -31,50 +28,45 @@ body header nav .custom-flex-start ul li {
   border-radius: 4px;
   border: 1px solid white;
 }
-
-body header nav .custom-flex-start ul .active {
+body header nav .custom-flex-start ul li .active {
   border: 2px solid #FACC15;
 }
-
+body header nav .custom-flex-start ul li a {
+  color: #030505;
+}
 body header nav .custom-flex-start ul li:hover {
   border: 1px solid #ee01f7;
 }
 
-body header nav .custom-flex-start ul li a {
-  color: #030505;
-}
-
-/*MAIN DEL HOME*/
+/* HOME*/
 body main .contenedor-home {
   margin-top: 120px;
   height: 600px;
 }
 
 /*TEXTO HOME*/
+body main .container .home__texto { /*TEXTO HOME*/ }
 body main .container .home__texto h2 {
   text-transform: capitalize;
   font-size: 70px;
   font-weight: bolder;
 }
-
 body main .container .home__texto p {
   font-size: 40px;
   font-style: italic;
 }
-
-/*IMAGEN HOME*/
+body main .container .home__img { /*IMAGEN HOME*/ }
 body main .container .home__img img {
   width: 550px;
   border-radius: 10px;
 }
 
 /*PROYECTOS*/
-main .contenedor-proyectos {
+body main .contenedor-proyectos {
   margin-top: 120px;
   height: 550px;
 }
-
-main .contenedor-proyectos .row .custom-col-proyect {
+body main .contenedor-proyectos .row .custom-col-proyect {
   border: 2px solid rgb(3, 3, 3);
   border-radius: 10px;
   padding-left: 30px;
@@ -83,45 +75,44 @@ main .contenedor-proyectos .row .custom-col-proyect {
   flex-direction: column;
   justify-content: space-around;
 }
-
-main .contenedor-proyectos .row .custom-col-proyect .proyectos {
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos {
   background-color: rgb(252, 252, 252);
   border: 2px solid black;
   border-radius: 10px;
   margin: 5px;
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
   transition: 0.5s;
+  position: relative;
 }
-
-main .contenedor-proyectos .row .custom-col-proyect .proyectos:hover {
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos:hover {
   background: #3ba57c;
   transform: scale(1.09) translateX(25px) translateY(-15px);
   z-index: 10;
 }
-
-.proyectos .img-proyecto {
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos:hover .contenido .rank {
+  opacity: 1;
+}
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos .img-proyecto {
   width: 100px;
   height: 100px;
 }
-
-.proyectos .img-proyecto img {
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos .img-proyecto img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 10px;
   border-radius: 4px;
 }
-
-.proyectos .contenido {
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos .contenido {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-transform: capitalize;
 }
-
-.proyectos .contenido .rank {
+body main .contenedor-proyectos .row .custom-col-proyect .proyectos .contenido .rank {
   position: relative;
   top: 40px;
   left: 350px;
@@ -130,35 +121,25 @@ main .contenedor-proyectos .row .custom-col-proyect .proyectos:hover {
   transition: 0.5s;
 }
 
-.proyectos:hover .rank {
-  opacity: 1;
-}
-
 /*FORMACION*/
-/*Miformacion*/
-main .contenedor-formacion {
+body main .contenedor-formacion {
   margin-top: 150px;
   text-align: center;
 }
-
-main .contenedor-formacion .row .columna-mi {
+body main .contenedor-formacion .row .columna-mi { /*Miformacion*/
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 15px;
 }
-
-main .contenedor-formacion .row .columna-mi .titulo-parrafo-forma {
+body main .contenedor-formacion .row .columna-mi .titulo-parrafo-forma {
   text-decoration: underline;
 }
-
-/*Formadores*/
-main .contenedor-formacion .titulo-row-2 {
+body main .contenedor-formacion .row .titulo-row-2 { /*Formadores*/
   text-align: center;
   text-transform: capitalize;
   text-decoration: underline;
 }
-
-main .row .columna-formaciones {
+body main .contenedor-formacion .row .columna-formaciones {
   position: relative;
   width: 100%;
   display: flex;
@@ -170,8 +151,7 @@ main .row .columna-formaciones {
   padding: 20px 0px;
   border-radius: 5px;
 }
-
-main .row .columna-formaciones .tarjeta {
+body main .contenedor-formacion .row .columna-formaciones .tarjeta {
   position: relative;
   width: 350px;
   height: 280px;
@@ -180,8 +160,7 @@ main .row .columna-formaciones .tarjeta {
   overflow: hidden;
   background-color: #3ba57c;
 }
-
-main .row .columna-formaciones .tarjeta .icono-forma {
+body main .contenedor-formacion .row .columna-formaciones .tarjeta .icono-forma {
   position: absolute;
   top: 0;
   left: 0;
@@ -195,31 +174,14 @@ main .row .columna-formaciones .tarjeta .icono-forma {
   justify-content: center;
   align-items: center;
 }
-
-main .row .columna-formaciones .tarjeta:hover .icono-forma {
-  top: 30px;
-  left: calc(50% - 40px);
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  overflow: hidden;
-  transition-delay: 0s;
-}
-
-main .row .columna-formaciones .tarjeta:hover .img-formacion {
-  width: 80px;
-  transition-delay: 0s;
-}
-
-main .row .columna-formaciones .tarjeta .icono-forma img {
+body main .contenedor-formacion .row .columna-formaciones .tarjeta .icono-forma img {
   width: 300px;
   margin-top: 5px;
   border-radius: 5px;
   transition: 0.5s;
   transition-delay: 0.25s;
 }
-
-main .row .columna-formaciones .tarjeta .content-forma {
+body main .contenedor-formacion .row .columna-formaciones .tarjeta .content-forma {
   position: relative;
   padding: 20px;
   text-align: center;
@@ -229,33 +191,41 @@ main .row .columna-formaciones .tarjeta .content-forma {
   transition: 0.5s;
   transition-delay: 0s;
 }
-
-main .row .columna-formaciones .tarjeta:hover .content-forma {
+body main .contenedor-formacion .row .columna-formaciones .tarjeta .content-forma h2 {
+  text-transform: capitalize;
+}
+body main .contenedor-formacion .row .columna-formaciones .tarjeta .content-forma p {
+  font-size: 20px;
+}
+body main .contenedor-formacion .row .columna-formaciones .tarjeta:hover .icono-forma {
+  top: 30px;
+  left: calc(50% - 40px);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition-delay: 0s;
+}
+body main .contenedor-formacion .row .columna-formaciones .tarjeta:hover .img-formacion {
+  width: 80px;
+  transition-delay: 0s;
+}
+body main .contenedor-formacion .row .columna-formaciones .tarjeta:hover .content-forma {
   transform: scale(1);
   transition-delay: 0.25s;
 }
-
-main .row .columna-formaciones .tarjeta .content-forma h2 {
-  text-transform: capitalize;
-}
-
-main .row .columna-formaciones .tarjeta .content-forma p {
-  font-size: 20px;
-}
-
-/*Herramientas*/
-main .contenedor-formacion .columna-herramientas {
+body main .contenedor-formacion .row .columna-herramientas { /*Herramientas*/
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 15px 0px;
   transform-style: preserve-3d;
   width: 100%;
   flex-wrap: wrap;
   border: 2px solid black;
   border-radius: 5px;
 }
-
-main .contenedor-formacion .columna-herramientas .card {
+body main .contenedor-formacion .row .columna-herramientas .card {
   position: relative;
   width: 320px;
   height: 320px;
@@ -265,8 +235,7 @@ main .contenedor-formacion .columna-herramientas .card {
   overflow: hidden;
   border: 3px solid white;
 }
-
-main .contenedor-formacion .columna-herramientas .card .caja-card {
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card {
   position: absolute;
   top: 0;
   left: 0;
@@ -275,12 +244,7 @@ main .contenedor-formacion .columna-herramientas .card .caja-card {
   transform-style: preserve-3d;
   transition: 1.5s ease;
 }
-
-main .contenedor-formacion .columna-herramientas .card:hover .caja-card {
-  transform: rotateY(180deg);
-}
-
-main .contenedor-formacion .columna-herramientas .card .caja-card .img-card {
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card .img-card {
   position: absolute;
   top: 0;
   left: 0;
@@ -292,14 +256,13 @@ main .contenedor-formacion .columna-herramientas .card .caja-card .img-card {
   align-content: center;
   background: #000000;
 }
-
-main .contenedor-formacion .columna-herramientas .card .caja-card .img-card i {
-  object-fit: cover;
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card .img-card i {
+  -o-object-fit: cover;
+     object-fit: cover;
   font-size: 80px;
   color: #d7dde2;
 }
-
-main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-card {
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card .contenido-card {
   position: absolute;
   top: 0;
   left: 0;
@@ -314,8 +277,7 @@ main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-car
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
-
-main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-card div {
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card .contenido-card div {
   transform-style: preserve-3d;
   transform: translateZ(100px);
   background: linear-gradient(45deg, #0EA5E9, #3ba57c);
@@ -323,126 +285,106 @@ main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-car
   padding: 20px;
   border-radius: 15px;
 }
-
-main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-card div h2 {
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card .contenido-card div h2 {
   text-transform: capitalize;
   font-style: italic;
   text-decoration: underline;
   backface-visibility: hidden;
 }
-
-main .contenedor-formacion .columna-herramientas .card .caja-card .contenido-card div p {
+body main .contenedor-formacion .row .columna-herramientas .card .caja-card .contenido-card div p {
   font-size: 16px;
   backface-visibility: hidden;
 }
+body main .contenedor-formacion .row .columna-herramientas .card:hover .caja-card {
+  transform: rotateY(180deg);
+}
 
 /*INFO*/
-/*Sobre Mi*/
-main .contenedor-info {
+body main .contenedor-info {
   margin-top: 130px;
   text-align: center;
 }
-
-main .contenedor-info .row .columna-sobre-mi {
+body main .contenedor-info .row .columna-sobre-mi { /*Sobre Mi*/
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 15px;
 }
-
-main .contenedor-info .row .columna-sobre-mi h2 {
+body main .contenedor-info .row .columna-sobre-mi h2 {
   text-transform: capitalize;
   text-decoration: underline;
 }
-
-main .contenedor-info .row .columna-sobre-mi p {
+body main .contenedor-info .row .columna-sobre-mi p {
   font-style: italic;
 }
-
-/*Mis Datos*/
-main .contenedor-info .row-mis-datos {
+body main .contenedor-info .row-mis-datos { /*Mis Datos*/
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 15px;
 }
-
-main .contenedor-info .row .columna-img-info {
+body main .contenedor-info .row-mis-datos .columna-img-info {
   height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-main .contenedor-info .row .columna-img-info img {
+body main .contenedor-info .row-mis-datos .columna-img-info img {
   width: 400px;
   border-radius: 25px;
 }
-
-main .contenedor-info .row .columna-caja-datos {
+body main .contenedor-info .row-mis-datos .columna-caja-datos {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   border-left: 2px solid black;
 }
-
-main .contenedor-info .row .columna-caja-datos .caja-datos {
-  width: 200px;
+body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .titulo-datos {
+  font-size: 60px;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .caja-datos {
   display: flex;
   flex-direction: column;
   text-align: justify;
   justify-content: center;
   align-content: center;
-}
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info h2 {
-  font-size: 60px;
-  text-decoration: underline;
-  text-transform: capitalize;
-}
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .caja-datos {
   width: 300px;
   display: flex;
   justify-content: center;
 }
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .caja-datos span {
+body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .caja-datos span {
   font-weight: bolder;
   font-size: 20px;
   text-decoration: underline;
   margin-left: 20px;
 }
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .caja-datos p {
+body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .caja-datos p {
   font-size: 20px;
   font-style: italic;
 }
-
-main .contenedor-info .row .columna-caja-datos .caja-datos-info .custom-btn.btn {
+body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .custom-btn.btn {
   background-color: #3ba57c;
   border-color: #3ba57c;
 }
 
 /*CONTACTO*/
-main .contenedor-contactos {
+body main .contenedor-contactos {
   margin-top: 130px;
 }
-
-/*Enlaces*/
-main .contenedor-contactos .row .columna-contactos .titulo-caja-contactos {
+body main .contenedor-contactos .row .columna-contactos { /*Enlaces */ }
+body main .contenedor-contactos .row .columna-contactos .titulo-caja-contactos {
   text-align: center;
   text-decoration: underline;
   text-transform: capitalize;
 }
-
-main .contenedor-contactos .row .columna-contactos .caja-contactos {
+body main .contenedor-contactos .row .columna-contactos .caja-contactos {
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
 }
-
-main .contenedor-contactos .row .columna-contactos .caja-contactos .contact {
+body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,43 +398,26 @@ main .contenedor-contactos .row .columna-contactos .caja-contactos .contact {
   transition: 1s;
   z-index: 3;
 }
-
-main .contenedor-contactos .row .columna-contactos .caja-contactos .contact i {
+body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact i {
   font-size: 80px;
 }
-
-main .contenedor-contactos .row .columna-contactos .caja-contactos .contact:hover {
+body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact:hover {
   transform: scale(130%) translateY(-15px);
   cursor: pointer;
   background-color: #3ba57c;
 }
-
-/*Formulario*/
-main .contenedor-contactos {
-  margin-top: 130px;
-}
-
-/*Enlaces*/
-main .contenedor-contactos .row-formulario {
+body main .contenedor-contactos .row-formulario { /*Formulario*/
   margin: 30px 0px;
 }
-
-main .contenedor-contactos {
-  margin-top: 130px;
-}
-
-/*Enlaces*/
-main .contenedor-contactos .row-formulario h2 {
+body main .contenedor-contactos .row-formulario h2 {
   text-align: center;
   text-decoration: underline;
   margin-bottom: 25px;
 }
-
-main .contenedor-contactos .row-formulario .col-12 {
+body main .contenedor-contactos .row-formulario .columna-formulario-seccion {
   margin-bottom: 86px;
 }
-
-main .contenedor-contactos .row-formulario .col-12 form label {
+body main .contenedor-contactos .row-formulario .columna-formulario-seccion form label {
   font-weight: bolder;
   text-transform: capitalize;
   text-decoration: underline;
@@ -506,6 +431,4 @@ main .contenedor-contactos .row-formulario .col-12 form label {
 
 body {
   background-color: #d7dde2;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
