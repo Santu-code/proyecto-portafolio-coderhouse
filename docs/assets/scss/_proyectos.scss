@@ -1,0 +1,65 @@
+            /*PROYECTOS*/
+main .contenedor-proyectos{
+    margin-top: 120px;
+    height: 550px;
+}
+main .contenedor-proyectos .row .custom-col-proyect{
+    border: 2px solid rgb(3, 3, 3);
+    border-radius: 10px;
+    padding-left:30px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main .contenedor-proyectos .row .custom-col-proyect .proyectos{
+    background-color: rgb(252, 252, 252);
+    border:2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+main .contenedor-proyectos .row .custom-col-proyect .proyectos:hover{
+    background:$primary-color;
+    transform: scale(1.09) translateX(25px) translateY(-15px);
+    z-index: 10;
+}
+
+
+
+.proyectos .img-proyecto{
+    width: 100px;
+    height: 100px;
+}
+
+.proyectos .img-proyecto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin:10px;
+    border-radius: 4px;
+}
+
+.proyectos .contenido{
+    margin-left:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.proyectos .contenido .rank{
+    position: relative;
+    top:40px;
+    left: 350px;
+    font-size: 50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.proyectos:hover .rank{
+    opacity: 1;
+}

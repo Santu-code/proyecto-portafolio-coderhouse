@@ -1,0 +1,24 @@
+            /*MAIN DEL HOME*/
+
+body main .contenedor-home{
+    margin-top: 120px;
+    height: 600px;
+}
+
+            /*TEXTO HOME*/
+
+body main .container .home__texto  h2{
+    text-transform: capitalize;
+    font-size: 70px;
+    font-weight:bolder;
+}
+body main .container .home__texto  p{
+    font-size: 40px;
+    font-style: italic;}
+
+            /*IMAGEN HOME*/
+
+body main .container .home__img img{
+    width: 550px;
+    border-radius:10px
+}

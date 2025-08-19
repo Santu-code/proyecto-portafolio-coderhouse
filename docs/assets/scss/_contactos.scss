@@ -1,0 +1,75 @@
+            /*CONTACTO*/
+main .contenedor-contactos{
+    margin-top: 130px;
+}
+            /*Enlaces*/
+
+main .contenedor-contactos .row .columna-contactos .titulo-caja-contactos{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+main .contenedor-contactos .row .columna-contactos .caja-contactos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+main .contenedor-contactos .row .columna-contactos .caja-contactos .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 30px 0px;
+    transition: 1s;
+    z-index: 3;
+}
+
+main .contenedor-contactos .row .columna-contactos .caja-contactos .contact i{
+    font-size: 80px;
+    
+}
+
+main .contenedor-contactos .row .columna-contactos .caja-contactos .contact:hover{
+    transform: scale(130%) translateY(-15px);
+    cursor: pointer;
+    background-color:$primary-color;
+}
+
+            /*Formulario*/
+
+main .contenedor-contactos{
+    margin-top: 130px;
+}
+            /*Enlaces*/
+
+main .contenedor-contactos .row-formulario{
+    margin:30px 0px
+}
+
+main .contenedor-contactos{
+    margin-top: 130px;
+}
+            /*Enlaces*/
+
+main .contenedor-contactos .row-formulario h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+main .contenedor-contactos .row-formulario .col-12{
+    margin-bottom: 86px;
+}
+main .contenedor-contactos .row-formulario .col-12 form label{
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
