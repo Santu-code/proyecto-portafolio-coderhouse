@@ -17,7 +17,12 @@ body header nav .custom-flex-start {
   align-content: flex-start;
   border-radius: 4px;
 }
+body header nav .custom-flex-start ul {
+  position: relative;
+  display: flex;
+}
 body header nav .custom-flex-start ul li {
+  position: relative;
   background-color: #3ba57c;
   display: flex;
   justify-content: center;
@@ -27,15 +32,87 @@ body header nav .custom-flex-start ul li {
   margin: 7px;
   border-radius: 4px;
   border: 1px solid white;
+  cursor: pointer;
+  transition: 0.5S;
 }
-body header nav .custom-flex-start ul li .active {
-  border: 2px solid #FACC15;
+body header nav .custom-flex-start ul li.active {
+  width: 180px;
+}
+body header nav .custom-flex-start ul li.active i {
+  opacity: 0;
+}
+body header nav .custom-flex-start ul li.active .titulo-icono {
+  transform: scale(1);
+  font-weight: bolder;
+  color: black;
 }
 body header nav .custom-flex-start ul li a {
-  color: #030505;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  margin: 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5S;
 }
 body header nav .custom-flex-start ul li:hover {
-  border: 1px solid #ee01f7;
+  width: 180px;
+}
+body header nav .custom-flex-start ul li:hover::before {
+  opacity: 1;
+}
+body header nav .custom-flex-start ul li:hover::after {
+  opacity: 0.5;
+}
+body header nav .custom-flex-start ul li:hover i {
+  transform: scale(0);
+  color: aliceblue;
+  transition-delay: 0.25s;
+}
+body header nav .custom-flex-start ul li:hover .titulo-icono {
+  transform: scale(1);
+  transition-delay: 0.25s;
+  font-weight: bolder;
+  color: white;
+}
+body header nav .custom-flex-start ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #3ba57c, #0EA5E9);
+  opacity: 0;
+  transition: 0.5s;
+}
+body header nav .custom-flex-start ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3ba57c, #0EA5E9);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: -1;
+  filter: blur(15px);
+}
+body header nav .custom-flex-start ul li i {
+  margin-top: 3px;
+  color: aliceblue;
+  font-size: 1.75em;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+body header nav .custom-flex-start ul li span {
+  position: absolute;
+}
+body header nav .custom-flex-start ul li .titulo-icono {
+  text-transform: uppercase;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
 }
 
 /* HOME*/
