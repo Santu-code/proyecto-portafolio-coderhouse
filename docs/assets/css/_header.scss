@@ -21,9 +21,14 @@ body{
                 align-items: flex-start !important;
                 align-content: flex-start;
                 border-radius: 4px;
+                
                 ul{
                     position: relative;
                     display: flex;
+                    @media (max-width:768px) { //Responsive para celular//
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
                     li{
                         position: relative;
                         background-color: #3ba57c;

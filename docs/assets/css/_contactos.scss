@@ -4,6 +4,9 @@ body{
     main{
         .contenedor-contactos{
             margin-top: 130px;
+            @media (max-width:768px){// Responsive para celular//
+                margin-top: 170px;
+            }
             .row{
                 .columna-contactos{    /*Enlaces */
                     .titulo-caja-contactos{
@@ -12,10 +15,14 @@ body{
                         text-transform: capitalize;
                     }
                     .caja-contactos{
-                        display: flex;
-                        justify-content: space-around;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        justify-items: center;
                         align-items: center;
                         align-content: center;
+                        @media (max-width:768px){// Responsive para celular//
+                            grid-template-columns: repeat(2, 1fr);
+                        }
                         .contact{
                             display: flex;
                             flex-direction: column;

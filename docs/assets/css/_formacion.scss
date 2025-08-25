@@ -6,6 +6,9 @@ body{
         .contenedor-formacion{
             margin-top: 150px;
             text-align: center;
+            @media (max-width:768px){// Responsive para celular//
+                margin-top: 170px;
+            }
             .row{   
                 .columna-mi{    /*Miformacion*/
                     border: 2px solid black;
@@ -23,14 +26,23 @@ body{
                 .columna-formaciones{
                     position: relative;
                     width: 100%;
-                    display: flex;
-                    justify-content: space-around;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    justify-items: center;
                     align-items: center;
                     margin: 15px 0px;
                     gap: 10px;
                     border: 2px solid black;
                     padding: 20px 0px;
                     border-radius: 5px;
+                    @media (max-width:1200px) { // Responsive para tablet mediana//
+                        grid-template-columns: repeat(2, 1fr);
+                        row-gap: 15px;
+                    }
+                     @media (max-width:768px) { // Responsive para celular//
+                        grid-template-columns: 1fr;
+                        row-gap: 15px;
+                    }
                     .tarjeta{
                         position: relative;
                         width: 350px;
@@ -96,8 +108,11 @@ body{
                     }
                 }
                 .columna-herramientas{  /*Herramientas*/
-                    display: flex;
-                    justify-content: center;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 400px);
+                    gap:15px;
+                    justify-items: center;
                     align-items: center;
                     margin: 15px 0px;
                     transform-style: preserve-3d;
@@ -105,6 +120,17 @@ body{
                     flex-wrap: wrap;
                     border: 2px solid black;
                     border-radius: 5px;
+                    @media (max-width:1200px) { // Responsive para tablet mediana//
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(3, 400px);
+                    }
+                    @media (max-width:992px) { // Responsive para tablet pequeña//
+                        grid-template-columns: repeat(2, 340px);
+                    }
+                    @media (max-width:768px) { // Responsive para celular//
+                        grid-template-columns: 1fr;
+
+                    }
                     .card{
                         position: relative;
                         width: 320px;
