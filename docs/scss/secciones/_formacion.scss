@@ -1,4 +1,6 @@
-            /*FORMACION*/
+@use'../general/variables' as color;
+
+/*FORMACION*/
 
 
 body{
@@ -50,7 +52,7 @@ body{
                         border: 3px solid rgb(248, 247, 247);
                         border-radius: 20px;
                         overflow: hidden;
-                        background-color: #3ba57c;
+                        background-color:color.$color-primario;
                         .icono-forma{
                             position: absolute;
                             top: 0;
@@ -182,7 +184,7 @@ body{
                                 div{
                                     transform-style: preserve-3d;
                                     transform: translateZ(100px);
-                                    background:linear-gradient(45deg, #0EA5E9, #3ba57c);
+                                    background:linear-gradient(45deg, #0EA5E9,color.$color-primario);
                                     margin:0px 30px;
                                     padding: 20px;
                                     border-radius: 15px;

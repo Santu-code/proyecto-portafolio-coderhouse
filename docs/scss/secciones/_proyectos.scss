@@ -1,4 +1,6 @@
-            /*PROYECTOS*/
+@use'../general/variables' as color;
+
+/*PROYECTOS*/
 
 body{
     main{
@@ -27,7 +29,7 @@ body{
                         transition: 0.5s;
                         position: relative;
                         &:hover{
-                            background:#3ba57c;
+                            background:color.$color-primario;
                             transform: scale(1.09) translateX(25px) translateY(-15px);
                             z-index: 10;
                         }

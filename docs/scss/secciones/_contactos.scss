@@ -1,4 +1,6 @@
-            /*CONTACTO*/
+@use'../general/variables' as color;
+
+/*CONTACTO*/
 
 body{
     main{
@@ -42,7 +44,7 @@ body{
                             &:hover{
                                 transform: scale(130%) translateY(-15px);
                                 cursor: pointer;
-                                background-color:#3ba57c;
+                                background-color:color.$color-primario;
                             }
                         }
                     }
