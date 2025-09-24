@@ -1,5 +1,11 @@
 /*GENERAL*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body main .contenedor-info .row-mis-datos .columna-img-info, body main .contenedor-info .row-mis-datos .columna-caja-datos, body main .contenedor-formacion .row .columna-formaciones .tarjeta .icono-forma, body main .contenedor-formacion .row .columna-herramientas .card .caja-card .img-card, body main .contenedor-formacion .row .columna-herramientas .card .caja-card .contenido-card, body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact, body header nav .custom-flex-start ul li, body header nav .custom-flex-start ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*HEADER*/
 body header nav .custom-color {
   background-color: #1E293B;
@@ -30,9 +36,6 @@ body header nav .custom-flex-start ul {
 body header nav .custom-flex-start ul li {
   position: relative;
   background-color: #3ba57c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100px;
   height: 40px;
   margin: 7px;
@@ -54,9 +57,6 @@ body header nav .custom-flex-start ul li.active .titulo-icono {
 }
 body header nav .custom-flex-start ul li a {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100px;
   height: 40px;
   margin: 7px;
@@ -139,6 +139,7 @@ body main .contenedor-contactos {
   body main .contenedor-contactos {
     margin-top: 170px;
   }
+<<<<<<< HEAD
 }
 body main .contenedor-contactos .row .columna-contactos { /*Enlaces */ }
 body main .contenedor-contactos .row .columna-contactos .titulo-caja-contactos {
@@ -163,6 +164,61 @@ body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 30px 0px;
+  transition: 1s;
+  z-index: 3;
+}
+body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact i {
+  font-size: 80px;
+}
+body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact:hover {
+  transform: scale(130%) translateY(-15px);
+  cursor: pointer;
+  background-color: #3ba57c;
+}
+body main .contenedor-contactos .row-formulario { /*Formulario*/
+  margin: 30px 0px;
+}
+body main .contenedor-contactos .row-formulario h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+body main .contenedor-contactos .row-formulario .columna-formulario-seccion {
+  margin-bottom: 86px;
+}
+body main .contenedor-contactos .row-formulario .columna-formulario-seccion form label {
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-decoration: underline;
+=======
+>>>>>>> version-1
+}
+body main .contenedor-contactos .row .columna-contactos { /*Enlaces */ }
+body main .contenedor-contactos .row .columna-contactos .titulo-caja-contactos {
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+body main .contenedor-contactos .row .columna-contactos .caja-contactos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+@media (max-width: 768px) {
+  body main .contenedor-contactos .row .columna-contactos .caja-contactos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+body main .contenedor-contactos .row .columna-contactos .caja-contactos .contact {
+  flex-direction: column;
   align-content: center;
   width: 130px;
   height: 130px;
@@ -264,9 +320,6 @@ body main .contenedor-formacion .row .columna-formaciones .tarjeta .icono-forma 
   transition-delay: 0.25s;
   z-index: 5;
   background: var(--i);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 body main .contenedor-formacion .row .columna-formaciones .tarjeta .icono-forma img {
   width: 300px;
@@ -363,9 +416,6 @@ body main .contenedor-formacion .row .columna-herramientas .card .caja-card .img
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   align-content: center;
   background: #000000;
 }
@@ -382,10 +432,7 @@ body main .contenedor-formacion .row .columna-herramientas .card .caja-card .con
   height: 100%;
   background: #505152;
   transform: rotateY(180deg);
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
@@ -468,7 +515,11 @@ body main .contenedor-proyectos {
   margin-bottom: clamp(40px, 5vw, 40px);
 }
 body main .contenedor-proyectos .row .custom-col-proyect {
+<<<<<<< HEAD
   border: 2px solid rgb(3, 3, 3);
+=======
+  border: 2px solid black;
+>>>>>>> version-1
   border-radius: 10px;
   padding-left: 30px;
   padding-top: 15px;
@@ -501,7 +552,12 @@ body main .contenedor-proyectos .row .custom-col-proyect .proyectos .img-proyect
 body main .contenedor-proyectos .row .custom-col-proyect .proyectos .img-proyecto img {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   object-fit: cover;
+=======
+  -o-object-fit: cover;
+     object-fit: cover;
+>>>>>>> version-1
   margin: 10px;
   border-radius: 4px;
 }
@@ -573,18 +629,12 @@ body main .contenedor-info .row-mis-datos { /*Mis Datos*/
 }
 body main .contenedor-info .row-mis-datos .columna-img-info {
   height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 body main .contenedor-info .row-mis-datos .columna-img-info img {
   width: 400px;
   border-radius: 25px;
 }
 body main .contenedor-info .row-mis-datos .columna-caja-datos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   align-content: center;
   border-left: 2px solid black;
 }
@@ -606,8 +656,6 @@ body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .
   justify-content: center;
   align-content: center;
   width: 300px;
-  display: flex;
-  justify-content: center;
 }
 body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .caja-datos span {
   font-weight: bolder;
@@ -630,6 +678,10 @@ body main .contenedor-info .row-mis-datos .columna-caja-datos .caja-datos-info .
 }
 body footer {
   margin-top: 20px;
+<<<<<<< HEAD
 }
 
 /*# sourceMappingURL=style.css.map */
+=======
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> version-1
