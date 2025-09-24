@@ -1,4 +1,11 @@
-            /*CONTACTO*/
+@use "sass:map";
+@use "../utilidades/maps";
+@use'../general/variables' as color;
+@use '../utilidades/extends';
+@use '../utilidades/mixins';
+
+
+/*CONTACTO*/
 
 body{
     main{
@@ -24,15 +31,12 @@ body{
                             grid-template-columns: repeat(2, 1fr);
                         }
                         .contact{
-                            display: flex;
+                            @extend%centrado;
                             flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
                             align-content: center;
-                            width: 130px;
-                            height: 130px;
+                            @include mixins.escalas(130px, 130px);
                             border-radius: 50%;
-                            border: 2px solid black;
+                            border: 2px solid color.$color-borde1;
                             margin: 30px 0px;
                             transition: 1s;
                             z-index: 3;
@@ -42,7 +46,7 @@ body{
                             &:hover{
                                 transform: scale(130%) translateY(-15px);
                                 cursor: pointer;
-                                background-color:#3ba57c;
+                                background-color: map.get(maps.$colores, color-primario);
                             }
                         }
                     }
@@ -69,5 +73,3 @@ body{
             }
         }
     }
-
-

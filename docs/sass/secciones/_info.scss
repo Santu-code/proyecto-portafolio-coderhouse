@@ -1,4 +1,9 @@
-            /*INFO*/
+@use "sass:map";
+@use "../utilidades/maps";
+@use'../general/variables' as color;
+@use '../utilidades/extends';
+
+/*INFO*/
 
 body{ 
     main{
@@ -10,7 +15,7 @@ body{
             }
             .row{
                 .columna-sobre-mi{  /*Sobre Mi*/
-                    border: 2px solid black;
+                    border: 2px solid color.$color-borde1;
                     border-radius: 5px;
                     margin-bottom: 15px;
                     h2{
@@ -23,28 +28,24 @@ body{
                 }
             }
             .row-mis-datos{     /*Mis Datos*/
-                border: 2px solid black;
+                border: 2px solid color.$color-borde1;
                 border-radius: 5px;
                 margin-bottom: 15px;
                 .columna-img-info{
                     height: 700px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @extend%centrado;
                     img{
                         width: 400px;
                         border-radius: 25px;
                     }
                 }
                 .columna-caja-datos{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @extend%centrado;
                     align-content: center;
-                    border-left: 2px solid black;
+                    border-left: 2px solid color.$color-borde1;
                     @media (max-width:992px){// Responsive para tablet pequeña//
-                            border-left: 0px solid black;
-                            border-top: 2px solid black;
+                            border-left: 0px solid color.$color-borde1;
+                            border-top: 2px solid color.$color-borde1;
                         }
                     .caja-datos-info{
                         .titulo-datos{
@@ -59,8 +60,6 @@ body{
                             justify-content:center;
                             align-content: center;
                             width: 300px;    
-                            display: flex;
-                            justify-content: center;
                             span{
                                 font-weight:bolder;
                                 font-size: 20px;
@@ -73,8 +72,8 @@ body{
                             }
                         }
                         .custom-btn.btn{
-                            background-color: #3ba57c;
-                            border-color: #3ba57c;
+                            background-color:map.get(maps.$colores, color-primario);
+                            border-color:map.get(maps.$colores, color-primario);
                         }
                     }
                     @media (max-width:992px){// Responsive para tablet pequeña//
@@ -88,4 +87,3 @@ body{
             margin-top: 20px;
         }
 }
-

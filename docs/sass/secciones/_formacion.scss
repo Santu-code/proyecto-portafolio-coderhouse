@@ -1,4 +1,10 @@
-            /*FORMACION*/
+@use "sass:map";
+@use "../utilidades/maps";
+@use '../general/variables' as color;
+@use '../utilidades/extends';
+@use '../utilidades/mixins';
+
+/*FORMACION*/
 
 
 body{
@@ -11,7 +17,7 @@ body{
             }
             .row{   
                 .columna-mi{    /*Miformacion*/
-                    border: 2px solid black;
+                    border: 2px solid color.$color-borde1;
                     border-radius: 5px;
                     margin-bottom: 15px;
                     .titulo-parrafo-forma{
@@ -32,7 +38,7 @@ body{
                     align-items: center;
                     margin: 15px 0px;
                     gap: 10px;
-                    border: 2px solid black;
+                    border: 2px solid color.$color-borde1;
                     padding: 20px 0px;
                     border-radius: 5px;
                     @media (max-width:1200px) { // Responsive para tablet mediana//
@@ -45,25 +51,21 @@ body{
                     }
                     .tarjeta{
                         position: relative;
-                        width: 350px;
-                        height: 280px;
+                        @include mixins.escalas(350px, 280px);
                         border: 3px solid rgb(248, 247, 247);
                         border-radius: 20px;
                         overflow: hidden;
-                        background-color: #3ba57c;
+                        background-color: map.get(maps.$colores, color-primario);
                         .icono-forma{
                             position: absolute;
                             top: 0;
                             left: 0;
-                            width: 100%;
-                            height: 100%;
+                            @include mixins.escalas(100%, 100%);
                             transition: 0.5s;
                             transition-delay: 0.25s;
                             z-index: 5;
                             background: var(--i);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @extend%centrado;
                             img{
                                 width: 300px;
                                 margin-top: 5px;
@@ -91,8 +93,7 @@ body{
                         &:hover .icono-forma{
                             top:30px;
                             left: calc(50% - 40px);
-                            width: 90px;
-                            height: 90px;
+                            @include mixins.escalas(90px, 90px);
                             border-radius: 50%;
                             overflow: hidden;
                             transition-delay: 0s;
@@ -118,7 +119,7 @@ body{
                     transform-style: preserve-3d;
                     width: 100%;
                     flex-wrap: wrap;
-                    border: 2px solid black;
+                    border: 2px solid color.$color-borde1;
                     border-radius: 5px;
                     @media (max-width:1200px) { // Responsive para tablet mediana//
                         grid-template-columns: repeat(2, 1fr);
@@ -133,8 +134,7 @@ body{
                     }
                     .card{
                         position: relative;
-                        width: 320px;
-                        height: 320px;
+                        @include mixins.escalas(320px, 320px);
                         margin: 20px;
                         transform-style: preserve-3d;
                         border-radius: 15px;
@@ -144,19 +144,15 @@ body{
                             position:absolute;
                             top: 0;
                             left: 0;
-                            width: 100%;
-                            height: 100%;
+                            @include mixins.escalas(100%,100%);
                             transform-style: preserve-3d;
                             transition: 1.5s ease;
                             .img-card{
                                 position: absolute;
                                 top: 0;
                                 left: 0;
-                                width: 100%;
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                                @include mixins.escalas(100%,100%);
+                                @extend%centrado;
                                 align-content: center;
                                 background: #000000;
                                 i{
@@ -169,20 +165,17 @@ body{
                                 position: absolute;
                                 top: 0;
                                 left: 0;
-                                width: 100%;
-                                height: 100%;
+                                @include mixins.escalas(100%,100%);
                                 background: #505152;
                                 transform: rotateY(180deg);
-                                display: flex;
                                 flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
+                                @extend%centrado;
                                 transform-style: preserve-3d;
                                 backface-visibility:hidden ;
                                 div{
                                     transform-style: preserve-3d;
                                     transform: translateZ(100px);
-                                    background:linear-gradient(45deg, #0EA5E9, #3ba57c);
+                                    background:linear-gradient(45deg, map.get(maps.$colores, color-secundario),map.get(maps.$colores, color-primario));
                                     margin:0px 30px;
                                     padding: 20px;
                                     border-radius: 15px;
@@ -208,7 +201,3 @@ body{
         }
     }
 }
-
-
-
-

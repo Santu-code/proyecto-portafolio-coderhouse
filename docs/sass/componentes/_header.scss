@@ -1,4 +1,9 @@
-            /*HEADER*/
+@use "sass:map";
+@use "../utilidades/maps";
+@use'../general/variables' as color;
+@use '../utilidades/extends';
+
+/*HEADER*/
 
 body{
     header{
@@ -31,10 +36,8 @@ body{
                     }
                     li{
                         position: relative;
-                        background-color: #3ba57c;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        background-color:map.get(maps.$colores, color-primario);
+                        @extend%centrado;
                         width: 100px;
                         height: 40px;
                         margin: 7px;
@@ -55,9 +58,7 @@ body{
                         }
                         a{
                             position: relative;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @extend%centrado;
                             width: 100px;
                             height: 40px;
                             margin: 7px;
@@ -90,7 +91,7 @@ body{
                             content: "";
                             position: absolute;
                             inset: 0;
-                            background: linear-gradient(45deg,#3ba57c,#0EA5E9 );
+                            background: linear-gradient(45deg,map.get(maps.$colores, color-primario),map.get(maps.$colores, color-secundario));
                             opacity: 0;
                             transition: 0.5s;
                             
@@ -101,7 +102,7 @@ body{
                             top: 10px;
                             width: 100%;
                             height: 100%;
-                            background: linear-gradient(45deg,#3ba57c,#0EA5E9);
+                            background: linear-gradient(45deg,map.get(maps.$colores, color-primario),map.get(maps.$colores, color-secundario));
                             transition: 0.5s;
                             opacity: 0;
                             z-index: -1;

@@ -1,4 +1,10 @@
-            /*PROYECTOS*/
+
+@use "sass:map";
+@use "../utilidades/maps";
+@use'../general/variables' as color;
+@use '../utilidades/mixins';
+
+/*PROYECTOS*/
 
 body{
     main{
@@ -10,7 +16,7 @@ body{
             
             .row{
                 .custom-col-proyect{
-                    border: 2px solid rgb(3, 3, 3);
+                    border: 2px solid color.$color-borde1;
                     border-radius: 10px;
                     padding-left:30px;
                     padding-top: 15px;
@@ -19,7 +25,7 @@ body{
                     justify-content: space-around;
                     .proyectos{
                         background-color: rgb(252, 252, 252);
-                        border:2px solid black;
+                        border:2px solid color.$color-borde1;
                         border-radius: 10px;
                         margin: 5px;
                         cursor: pointer;
@@ -27,7 +33,7 @@ body{
                         transition: 0.5s;
                         position: relative;
                         &:hover{
-                            background:#3ba57c;
+                            background:map.get(maps.$colores, color-primario);
                             transform: scale(1.09) translateX(25px) translateY(-15px);
                             z-index: 10;
                         }
@@ -35,11 +41,9 @@ body{
                             opacity: 1;
                         }
                         .img-proyecto{
-                            width: 100px;
-                            height: 100px;
+                            @include mixins.escalas(100px,100px);
                             img{
-                                width: 100%;
-                                height: 100%;
+                                @include mixins.escalas(100%,100%);
                                 object-fit: cover;
                                 margin:10px;
                                 border-radius: 4px;
